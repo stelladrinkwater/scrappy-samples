@@ -24,6 +24,7 @@ def handle_osc_message(address, *args):
 
     try:
         dot_index = int(args[0])
+        device = devices[dot_index]
         command = str(args[1]).lower()
     except ValueError:
         print("Invalid dot index or command.")
